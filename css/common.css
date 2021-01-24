@@ -1,0 +1,236 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap");
+/****************************************************
+* Stylesheet
+* 1.general
+* 2.layout
+* 3.template
+* 4.content
+* 5.Smartphone
+* ※The breakpoint is 768 pixel, so please change it according to the site
+****************************************************/
+
+/****************************************************
+ * Stylesheet
+ ****************************************************/
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed, 
+ figure, figcaption, footer, header, hgroup, 
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, 
+ footer, header, hgroup, menu, nav, section {
+     display: block;
+ }
+ body {
+     line-height: 1;
+ }
+ ol, ul {
+     list-style: none;
+ }
+ blockquote, q {
+     quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+     content: '';
+     content: none;
+ }
+ table {
+     border-collapse: collapse;
+     border-spacing: 0;
+ }
+ *, *::before, 
+ *::after {
+     box-sizing: border-box;
+ }
+ img {
+     max-width: 100%;
+ }
+
+/****************************************************
+* 1.GENERAL
+****************************************************/
+
+html {
+	font-size: 10px;
+	font-family: "Noto Sans JP";
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 1.6rem;
+	margin: 0;
+	padding: 0;
+	color: #333333;
+	background-color: #ffffff;
+}
+.container {
+	min-width: 1120px;
+}
+.container {
+	min-width: auto;
+}
+a {
+	text-decoration: none;
+	transition: all 0.3s;
+}
+a:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+.is_pc {
+	display: block;
+}
+.is_sp {
+	display: none;
+}
+.fw_bold {
+	font-weight: bold;
+}
+
+/****************************************************
+* 1.GENERAL
+****************************************************/
+
+#main {
+    min-width: auto;
+    margin-top: 150px;
+}
+
+#contents #main {
+	margin-top: 172px;
+}
+.inner {
+    width: 96%;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+/****************************************************
+  * HEADER TEMPLATE SETTING
+  ****************************************************/
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+	width: 100%;
+    height: 155px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+	z-index: 3;
+}
+#header.activer {
+	background-color: #118ab2;
+}
+#header .header-top,
+#header .header-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+#header .header-top p{
+    font-size: 1.6rem;
+    color: #333333;
+    font-weight: 500;
+    align-self: center;
+    position: relative;
+    padding-left: 40px;
+}
+#header .header-top p span{
+    font-size: 1.8rem;
+    color: #3a86ff;
+    padding-left: 15px;
+    letter-spacing: 2px; 
+}
+
+#header .header-top p::before{
+content: "";
+position: absolute;
+background-image: url("../img/common/icon_phone.png");
+width: 53px;
+left: -20px;
+height: 58px;
+top: -12px;
+}
+
+#gNav ul {
+    height: 66px;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+#gNav ul li {
+    margin: 0 20px;
+}
+
+#gNav ul li a {
+    font-size: 1.5rem;
+    text-align: left;
+    color: #333333;
+    transition: all 0.3s;
+}
+#header .social_list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#header .social_list li:nth-child(2){
+    margin: 0px 10px;
+}
+
+/****************************************************
+* BREADCRUMB ON PC
+****************************************************/
+.breadcrumb ul {
+	display: block;
+    padding: 25px 0px 79px;
+}
+.breadcrumb  li {
+	display: inline-block;
+}
+.breadcrumb  li,
+.breadcrumb  li a{
+    position: relative ;
+	font-size: 1.6rem;
+	font-weight: bold;
+    line-height: 1.33;
+	text-decoration: none;
+	color: #000000;
+
+}
+
+.breadcrumb  li:first-child::after{
+    content: '/';
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 12px 4px 15px;
+    font-size: 1.6rem;
+  
+}

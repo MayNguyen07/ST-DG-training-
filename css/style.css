@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap");
+
+/****************************************************
+  * HEADER TEMPLATE SETTING
+  ****************************************************/
+#header .header_btn_wrap{
+    border-top: 1px solid #cccccc;
+    width: 100%;
+}
+#header .clinic_gNav li{
+    border-right: 1px solid #cccccc;
+    line-height: 4.2;
+    margin: 0px;
+}
+#header .clinic_gNav li span{
+    padding: 0px 20px;
+}
+/****************************************************
+* BREADCRUMB ON PC
+****************************************************/
+.breadcrumb_clinic{
+    background-image: url("../img/common/bg_breadcrumb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 165px;
+    width: 100%;
+
+}
+.breadcrumb_clinic ul{
+    padding: 70px 0px 70px;
+}
