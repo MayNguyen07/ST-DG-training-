@@ -30,3 +30,13 @@
 .breadcrumb_clinic ul{
     padding: 70px 0px 70px;
 }
+/****************************************************
+* CART ON PC
+****************************************************/
+#cart_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    justify-content: space-around;
+}

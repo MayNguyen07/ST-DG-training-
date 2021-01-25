@@ -1,0 +1,41 @@
+[{
+    "id":1,
+    "title":"NECK SHOUDER PAIN 1",
+    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
+    "img":"./img/common/img_card.jpg"
+},{
+    "id":2,
+    "title":"NECK SHOUDER PAIN 2",
+    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
+    "img":"./img/common/img_card.jpg"
+},{
+    "id":3,
+    "title":"NECK SHOUDER PAIN 3",
+    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
+    "img":"./img/common/img_card.jpg"
+},{
+    "id":4,
+    "title":"NECK SHOUDER PAIN 4",
+    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
+    "img":"./img/common/img_card.jpg"
+},{
+    "id":5,
+    "title":"NECK SHOUDER PAIN 5",
+    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
+    "img":"./img/common/img_card.jpg"
+},{
+    "id":6,
+    "title":"NECK SHOUDER PAIN 6",
+    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
+    "img":"./img/common/img_card.jpg"
+},{
+    "id":7,
+    "title":"NECK SHOUDER PAIN 7",
+    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
+    "img":"./img/common/img_card.jpg"
+},{
+    "id":8,
+    "title":"NECK SHOUDER PAIN 8",
+    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
+    "img":"./img/common/img_card.jpg"
+}]
