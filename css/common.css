@@ -165,7 +165,7 @@ a:hover {
 	display: inline-block;
 }
 .banner .banner-item ,
-.banner  .banner-item  a{
+.banner  .banner-item a{
     position: relative ;
 	font-size: 1.6rem;
     line-height: 1.33;
@@ -184,7 +184,7 @@ a:hover {
 }
 
 /****************************************************
-* cart TEMPLATE ON PC
+* CART TEMPLATE ON PC
 ****************************************************/
 .cart {
     border: 1px solid #cccccc;

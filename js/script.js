@@ -4,9 +4,8 @@ fetch('data/product_list.json')
 function renderAllProducts(productsArray) {
     productsArray.forEach(product => renderOneProduct(product));
 }
-const findDiv = document.querySelector('#cart_list')
+const findDiv = document.querySelector('#cart-list')
 function renderOneProduct(product) {
-    var URL = './img/common'
     console.log('create product');
     const newElement = document.createElement('div')
     newElement.className = 'content_cart'
