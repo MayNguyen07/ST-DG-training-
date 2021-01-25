@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>Specialized Clinic</title>
@@ -11,56 +11,61 @@
 </head>
 
 <body>
-    <div class="container" id="contents">
-        <header id="header">
-            <div class="header-top inner">
-                <h1><a href="./"><img src="./img/common/logo_header.png" alt="logo"/></a></h1>
-                <p>Question for the doctor? <span>05113941 977</span></p>
-            </div>
-            <div class="header_btn_wrap">
-                <div class="header-bottom inner">
-                    <nav id="gNav" class="clinic_gNav">
-                        <ul>
-                            <li><a href="./"><span>HOME</span></a></li>
-                            <li><a href="#"><span>ABOUT US</span></a></li>
-                            <li><a href="#"><span>HEATH SERVICES</span></a></li>
-                            <li><a href="#"><span>REGULAR MEDICINE</span></a></li>
-                            <li><a href="#"><span>SET CALENDAR</span></a></li>
-                            <li><a href="#"><span>CONSULT & CONTACT</span></a></li>
+    <header class="header">
+        <div class="header-content">
+                <div class="header-top">
+                    <div class="container">
+                        <h1><a href="./"><img src="./img/common/header-logo.png" alt="logo"></a></h1>
+                        <div class="call-wrap">
+                            <p class="header-call">
+                                <a href="tel:+11111"><img src="./img/common/header_phone.png" alt="icon-phone"></a>
+                                Question for the doctor?
+                                <span><a href="tel:+11111">05113941 977</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <div class="container">
+                        <nav  class="header-gnav clinic_gnav">
+                            <ul class="gnav-list">
+                                <li class="gnav-item"><a href="./">Home</a></li>
+                                <li class="gnav-item"><a href="#">About Us</a></li>
+                                <li class="gnav-item"><a href="#">Heath Services</a></li>
+                                <li class="gnav-item"><a href="#">Regular Medicine</a></li>
+                                <li class="gnav-item"><a href="#">Set Calendar</a></li>
+                                <li class="gnav-item"><a href="#">Consult &amp; Contact</a></li>
+                            </ul>
+                        </nav>
+                        <ul class="header-social">
+                            <li class="social-item"><a href="#"><span><img src="./img/common/icon_fb.png" alt=""></span></a></li>
+                            <li class="social-item"><a href="#"><span><img src="./img/common/icon_gg.png" alt=""></span></a></li>
+                            <li class="social-item"><a href="#"><span><img src="./img/common/icon_youtube.png" alt=""></span></a></li>
                         </ul>
-                    </nav>
-                    <ul class="social_list">
-                        <li><a href="#"><span><img src="./img/common/icon_fb.png" alt=""></span></a></li>
-                        <li><a href="#"><span><img src="./img/common/icon_gg.png" alt=""></span></a></li>
-                        <li><a href="#"><span><img src="./img/common/icon_youtube.png" alt=""></span></a></li>
-                    </ul>
-                 </div>
-            </div>
-            <!--End header-->
-        </header>
+                     </div>
+                </div>
+        </div>
+    <!--End header-->
+    </header>
         
-        <div id="main" class="health_service">
-            <div class="breadcrumb breadcrumb_clinic">
-                <div class="inner">
-                    <ul>
-                        <li><a href="./">HOME</a></li>
-                        <li>HEATH SERVICES</li>
+        <main class="main-content">
+            <div class="banner banner_clinic">
+                <div class="container">
+                    <ul class="banner-list">
+                        <li class="banner-item"><a href="./">HOME</a></li>
+                        <li class="banner-item">HEATH SERVICES</li>
                     </ul>
                 </div>
             </div>
-            <div id="cart_list">
-
+            <div id="js-cart-list">
             </div>
 
+            <!-- End main-->
+        </main>
 
-            <!--/main-->
-        </div>
-
-        <footer class="footer">
-
+    <footer class="footer">
     </footer>
-        <!--/container-->
-    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="./js/script.js"></script>
 </body>

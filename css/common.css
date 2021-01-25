@@ -76,18 +76,17 @@ html {
 }
 
 body {
-	font-size: 1.6rem;
+    font-size: 1.6rem;
 	margin: 0;
 	padding: 0;
 	color: #333333;
 	background-color: #ffffff;
 }
 .container {
-	min-width: 1120px;
+    width: 1240px;
+    margin: 0 auto;
 }
-.container {
-	min-width: auto;
-}
+
 a {
 	text-decoration: none;
 	transition: all 0.3s;
@@ -96,133 +95,86 @@ a:hover {
 	opacity: 0.7;
 	cursor: pointer;
 }
-.is_pc {
-	display: block;
-}
-.is_sp {
-	display: none;
-}
-.fw_bold {
-	font-weight: bold;
-}
-
-/****************************************************
-* 1.GENERAL
-****************************************************/
-
-#main {
-    min-width: auto;
-    margin-top: 17px;
-}
-
-.inner {
-    width: 96%;
-    margin: 0 auto;
-    max-width: 1240px;
-}
 
 /****************************************************
   * HEADER TEMPLATE SETTING
   ****************************************************/
-
-#header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-	width: 100%;
-    height: 155px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    top: 0;
-    left: 0;
-    right: 0;
-	z-index: 3;
+  .header .header-top {
+      padding: 1rem 0;
+      border-bottom: 1px solid #cccccc;
 }
-#header.activer {
-	background-color: #118ab2;
-}
-#header .header-top,
-#header .header-bottom{
+  .header .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
 }
-#header .header-top p{
+.header.activer {
+	background-color: #118ab2;
+}
+
+.header-top .header-call {
+    display: flex;
+    align-items: center;
     font-size: 1.6rem;
     color: #333333;
     font-weight: 500;
-    align-self: center;
-    position: relative;
-    padding-left: 40px;
 }
-#header .header-top p span{
-    font-size: 1.8rem;
+.header .header-call span {
+    font-size: 2rem;
     color: #3a86ff;
-    padding-left: 15px;
-    letter-spacing: 2px; 
+    padding-left: 1.5rem;
+    font-weight: 500;
 }
 
-#header .header-top p::before{
-content: "";
-position: absolute;
-background-image: url("../img/common/icon_phone.png");
-width: 53px;
-left: -20px;
-height: 58px;
-top: -12px;
-}
-
-#gNav ul {
-    height: 66px;
-    float: left;
+.header-gnav .gnav-list{
     display: flex;
     align-items: center;
 }
 
-#gNav ul li {
-    margin: 0 20px;
+.header-gnav .gnav-item{
+    padding: 2rem 1.5rem;
+    border-right: 1px solid #cccccc;
 }
 
-#gNav ul li a {
+.header-gnav .gnav-item a {
     font-size: 1.5rem;
     text-align: left;
     color: #333333;
     transition: all 0.3s;
+    text-transform: uppercase;
 }
-#header .social_list{
+.header-bottom .header-social{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-#header .social_list li:nth-child(2){
-    margin: 0px 10px;
+.header-bottom .header-social li:nth-child(2){
+   padding: 0 1rem;
 }
 
 /****************************************************
-* BREADCRUMB ON PC
+* BANNER ON PC
 ****************************************************/
-.breadcrumb ul {
+.banner .banner-list{
 	display: block;
-    padding: 25px 0px 79px;
+    padding: 7rem 0 7rem;
 }
-.breadcrumb  li {
+.banner .banner-item {
 	display: inline-block;
 }
-.breadcrumb  li,
-.breadcrumb  li a{
+.banner .banner-item ,
+.banner  .banner-item  a{
     position: relative ;
 	font-size: 1.6rem;
-	font-weight: bold;
     line-height: 1.33;
 	text-decoration: none;
 	color: #000000;
 
 }
 
-.breadcrumb  li:first-child::after{
+.banner  .banner-item :first-child::after{
     content: '/';
     display: inline-block;
     vertical-align: middle;
