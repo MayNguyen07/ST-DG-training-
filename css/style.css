@@ -20,10 +20,22 @@
 /****************************************************
 * CART ON PC
 ****************************************************/
-#cart_list{
+.js-cart-list{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 40px auto;
     justify-content: space-around;
+    width: calc(100% - 285px);
+}
+
+/****************************************************
+* CUSTOMIZE LAYOUT IN MAIN
+****************************************************/
+.service-content {
+display: flex;
+margin-top: 6rem;
+}
+.service-content .aside{
+    width: 27rem;
+    margin-right: 1.5rem;
 }

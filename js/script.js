@@ -1,32 +1,76 @@
+ //Show and hide sidebar
+$(".ttl-sidebar").click (function(){
+  $(this).next(".category-content").stop().slideToggle(300);
+  $(this).find('span').toggleClass('hide show ');
+});
+
+
+ //Show product lists 
 fetch('data/product_list.json')
 .then(response => response.json())
 .then(productsArray => renderAllProducts(productsArray));
 function renderAllProducts(productsArray) {
     productsArray.forEach(product => renderOneProduct(product));
 }
-const findDiv = document.querySelector('#cart-list')
+const findDiv = document.querySelector('.js-cart-list')
 function renderOneProduct(product) {
-    console.log('create product');
-    const newElement = document.createElement('div')
-    newElement.className = 'content_cart'
-    newElement.innerHTML = `
-            <div class="cart">
-                <img src="./${product.img}" class="cart-img">
-                <div class="cart-body">
-                    <h5 class="cart-title">${product.title}</h5>
-                    <p class="cart-text">${product.desc}</p>
-                    <button data-name=${product.id} class="cart-button">Add item</button>
-                </div>
-            </div>
-    `
-    findDiv.append(newElement)
+  //   const newElement = document.createElement('div')
+  //   newElement.className = 'content-cart'
+  //   newElement.innerHTML = `
+  //           <div class="cart">
+  //               <img src="./${product.img}" class="cart-img">
+  //               <div class="cart-body">
+  //                   <h5 class="cart-title">${product.title}</h5>
+  //                   <p class="cart-text">${product.desc}</p>
+  //                   <button data-name=${product.id} class="cart-button">Add item</button>
+  //               </div>
+  //           </div>
+  //   `
+  // findDiv.append(newElement)
+
+  var cartListEL = document.createElement("div");
+  cartListEL.classList.add("content-cart");
+
+  var cartEL = document.createElement("div");
+  cartEL.classList.add("cart");
+  cartListEL.appendChild(cartEL);
+
+  var cartImgEL = document.createElement("img");
+  cartImgEL.classList.add("cart-img");
+  cartImgEL.src = `./${product.img}`;
+  cartEL.appendChild(cartImgEL);
+
+  var cartBodyEL = document.createElement("div");
+  cartBodyEL.classList.add("cart-body");
+  cartEL.appendChild(cartBodyEL);
+
+  var cartTitleEL = document.createElement("h5");
+  cartTitleEL.classList.add("cart-title");
+  cartTitleEL.textContent=`${product.title}`;
+  cartBodyEL.appendChild(cartTitleEL);
+
+  var cartTextEL = document.createElement("p");
+  cartTextEL.classList.add("cart-text");
+  cartTextEL.textContent=`${product.desc}`;
+  cartBodyEL.appendChild(cartTextEL);
+
+  var cartButtonEL = document.createElement("button");
+  cartButtonEL.classList.add("cart-button");
+  cartButtonEL.textContent="Add item";
+  cartButtonEL.addEventListener('click', () => {
+    // shoppingCart.addItemToCart(product.id, product.price)
+  });
+  cartBodyEL.appendChild(cartButtonEL);
+
+  findDiv.append(cartListEL);
 }
 
 // Shopping Cart 
 var shoppingCart = (function() {
     cart = [];
     // Constructor
-    function Item(name, count) {
+    function Item(id, name, count) {
+      this.id = id;
       this.name = name;
       this.count = count;
     }
