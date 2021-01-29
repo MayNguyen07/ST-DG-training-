@@ -2,45 +2,36 @@
     "id":1,
     "title":"NECK SHOUDER PAIN 1",
     "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
-    "img":"./img/common/img_card.jpg"
+    "img":"./img/common/img_card.jpg",
+    "price":24
 },{
     "id":2,
     "title":"NECK SHOUDER PAIN 2",
     "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
-    "img":"./img/common/img_card.jpg"
+    "img":"./img/common/img_card.jpg",
+    "price":40
 },{
     "id":3,
     "title":"NECK SHOUDER PAIN 3",
     "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
-    "img":"./img/common/img_card.jpg"
+    "img":"./img/common/img_card.jpg",
+    "price":30
 },{
     "id":4,
     "title":"NECK SHOUDER PAIN 4",
     "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
-    "img":"./img/common/img_card.jpg"
+    "img":"./img/common/img_card.jpg",
+    "price":10
 },{
     "id":5,
     "title":"NECK SHOUDER PAIN 5",
     "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
-    "img":"./img/common/img_card.jpg"
+    "img":"./img/common/img_card.jpg",
+    "price":20
 },{
     "id":6,
     "title":"NECK SHOUDER PAIN 6",
     "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
-    "img":"./img/common/img_card.jpg"
-},{
-    "id":7,
-    "title":"NECK SHOUDER PAIN 7",
-    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
-    "img":"./img/common/img_card.jpg"
-},{
-    "id":8,
-    "title":"NECK SHOUDER PAIN 8",
-    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
-    "img":"./img/common/img_card.jpg"
-},{
-    "id":9,
-    "title":"NECK SHOUDER PAIN 9",
-    "desc":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id repudiandae porro quibusdam, minima labore ad consequatur, corrupti distinctio",
-    "img":"./img/common/img_card.jpg"
+    "img":"./img/common/img_card.jpg",
+    "price":25
 }]
