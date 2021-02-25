@@ -1,0 +1,6 @@
+.shopping-cart {
+  .row {
+    @extend %flex-centered;
+    justify-content: flex-start;
+  }
+}

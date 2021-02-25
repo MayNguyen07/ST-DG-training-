@@ -1,0 +1,45 @@
+.header {
+  height: 15rem;
+  @extend %flex-row-ct;
+  justify-content: space-between;
+  .header-top {
+    padding: 1rem 0;
+    border-bottom: 1px solid map-get($color, "light-gray");
+    .header-call {
+      @extend %flex-centered;
+      font-size: 1.6rem;
+      color: map-get($color, "text-black");
+      font-weight: 500;
+      span {
+        font-size: 2rem;
+        font-weight: 500;
+        color: map-get($color, "light-blue");
+        padding-left: 1.5rem;
+      }
+    }
+  }
+  .header-bottom {
+    .header-social {
+      @extend %flex-row-ct;
+      li:nth-child(2) {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+.header-gnav {
+  .gnav-list {
+    @extend %flex-centered;
+  }
+  .gnav-item {
+    padding: 2rem 1.5rem;
+    border-right: 1px solid map-get($color, "light-gray");
+    a {
+      font-size: 1.5rem;
+      text-align: left;
+      color: map-get($color, "text-black");
+      text-transform: uppercase;
+    }
+  }
+}

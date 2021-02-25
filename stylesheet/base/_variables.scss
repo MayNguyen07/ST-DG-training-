@@ -1,0 +1,37 @@
+$font-body: "Noto Sans JP", sans-serif;
+//  Breakpoints
+$breakpoints: (
+  sm: 480px,
+  md: 769px,
+  wide: 960px,
+  lg: 1024px,
+  lgest: 1280px,
+  super-lgest: 1441px,
+);
+$font-size: (
+  xs: 11px,
+  sm: 13px,
+  normal: 16px,
+  lg: 18px,
+  xl: 20px,
+  xxl: 24px,
+);
+
+$color: (
+  white: #ffffff,
+  light-gray: #cccccc,
+  dark-gray: #3c414e,
+  bg-gray: #f5f5f5,
+  bg-gray-light: #eee,
+  black: #000000,
+  text-black: #333333,
+  light-blue: #3a86ff,
+  blue: #48cae4,
+  est-bg: #f4f4f4,
+  green: #55a630,
+  
+);
+html[theme='blue'] {
+  --primary: #16408e;
+  --secondary: #295ec0;
+}

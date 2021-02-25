@@ -1,0 +1,69 @@
+html {
+  font-size: 10px;
+  font-family: $font-body;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  background-color: #ffffff;
+}
+.container {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    transition: all 0.3s;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+input,
+button,
+textarea {
+  font-family: $font-body;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: map-get($color: "text-black");
+}
+h1 {
+  font-size: 4rem;
+  line-height: 2;
+}
+h2 {
+  font-size: 3.5rem;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+h3 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+h4 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+h6 {
+  font-size: 1.6rem;
+  line-height: 2;
+}

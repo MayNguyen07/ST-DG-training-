@@ -1,0 +1,44 @@
+footer {
+  background-color: map-get($color, "blue");
+  padding: 3rem 0 0;
+  .footer-content {
+    @extend %flex-row;
+    justify-content: start;
+    padding: 2rem 0;
+  }
+  .content-list {
+    color: map-get($color, "white");
+    font-size: 1.5rem;
+    padding-right: 11rem;
+    text-transform: uppercase;
+    .ttl-list {
+      font-size: 2rem;
+      font-weight: 500;
+      padding-bottom: 2rem;
+    }
+    .lists-wrap {
+      padding-left: 2rem;
+    }
+    .list-item {
+      list-style: disc;
+      line-height: 2;
+    }
+  }
+}
+
+.copyright {
+  border-top: 1px solid map-get($color, "white");
+  padding: 2rem 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content {
+    color: map-get($color, "white");
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    .ctn-link {
+      color: map-get($color, "white");
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.sidebar {
+  .sidebar-item {
+    .ttl-sidebar {
+      @extend %flex-centered;
+      justify-content: space-between;
+      padding: 2rem;
+      color: map-get($color, "black");
+      background: map-get($color, "est-bg");
+      cursor: pointer;
+      .hide {
+        display: none;
+      }
+      span {
+        color: map-get($color, "black");
+        font-size: 3rem;
+        display: inline-block;
+      }
+      .category-content {
+        display: none;
+        padding-left: 3rem;
+      }
+      .content-item {
+        font-size: 1.6rem;
+        padding: 1rem 0;
+        list-style: disc;
+        color: map-get($color, "black");
+      }
+    }
+  }
+}

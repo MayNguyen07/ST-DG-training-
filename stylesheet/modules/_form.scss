@@ -1,0 +1,12 @@
+.form {
+  input {
+    width: 100%;
+    border: none;
+    margin-bottom: 2rem;
+    padding: 1.6rem;
+  }
+  .submit {
+    color: map-get($color, 'white' );
+    background-color: map-get($color, 'green' );
+  }
+}

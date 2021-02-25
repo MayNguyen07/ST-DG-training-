@@ -1,0 +1,22 @@
+.breadcrumbs {
+  display: block;
+  padding: 7rem 0 7rem;
+  .breadcrumbs-item {
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1.33;
+    text-decoration: none;
+    color: map-get($color, "black");
+    &:first-child::after {
+      content: "/";
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 1.2rem 0.4rem 1.4rem;
+      font-size: 1.6rem;
+    }
+  }
+  .iteam-link {
+    color: map-get($color, "black");
+  }
+}

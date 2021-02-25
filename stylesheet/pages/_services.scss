@@ -1,0 +1,36 @@
+.banner_clinic {
+  background-image: url("../img/common/bg_breadcrumb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 165px;
+  width: 100%;
+}
+.content-cart {
+  margin-bottom: 3rem;
+}
+.js-cart-list {
+  @extend %flex-row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: calc(100% - 285px);
+}
+.schedule .ttl-form {
+  color: map-get($color, 'black' );
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.sidebar-item .schedule {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: map-get($color, 'bg-grey' );
+}
+.service-content {
+  display: flex;
+  margin-top: 6rem;
+}
+.service-content .aside {
+  width: 27rem;
+  margin-right: 1.5rem;
+}

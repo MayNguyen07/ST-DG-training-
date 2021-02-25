@@ -1,0 +1,27 @@
+.cart {
+  border: 1px solid map-get($color, "light-gray");
+  width: 30rem;
+  padding-bottom: 3rem;
+  .cart-img {
+    width: 30rem;
+    height: auto;
+  }
+  .cart-body {
+    padding: 2rem;
+  }
+  .cart-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: map-get($color, "black");
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.5rem 0 2rem;
+  }
+  .cart-text {
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #333333;
+    text-align: justify;
+  }
+}

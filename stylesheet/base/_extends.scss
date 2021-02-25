@@ -1,0 +1,22 @@
+%flex-centered {
+  display: flex;
+  align-items: center;
+}
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+%flex-row {
+  display: flex;
+  flex-direction: row;
+}
+%flex-collumn-ct {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+%flex-row-ct {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}

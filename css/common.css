@@ -167,15 +167,15 @@ a:hover {
 /****************************************************
 * BANNER ON PC
 ****************************************************/
-.banner .banner-list {
+.banner .breadcrumbs{
     display: block;
     padding: 7rem 0 7rem;
 }
-.banner .banner-item {
+.banner .breadcrumbs-item {
     display: inline-block;
 }
-.banner .banner-item,
-.banner .banner-item a {
+.banner .breadcrumbs-item,
+.banner .breadcrumbs-item a {
     position: relative;
     font-size: 1.6rem;
     line-height: 1.33;
@@ -183,7 +183,7 @@ a:hover {
     color: #000000;
 }
 
-.banner .banner-item :first-child::after {
+.banner .breadcrumbs-item :first-child::after {
     content: "/";
     display: inline-block;
     vertical-align: middle;
