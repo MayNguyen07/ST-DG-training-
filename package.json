@@ -1,0 +1,24 @@
+{
+  "name": "st-dg-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/jquery": "^3.5.5",
+    "typescript": "^4.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npx tsc --watch -p ts --outDir js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MayNguyen07/ST-DG-training-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MayNguyen07/ST-DG-training-/issues"
+  },
+  "homepage": "https://github.com/MayNguyen07/ST-DG-training-#readme"
+}

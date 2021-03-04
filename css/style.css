@@ -8,34 +8,33 @@
 /****************************************************
 * BREADCRUMB ON PC
 ****************************************************/
-.banner_clinic{
-    background-image: url("../img/common/bg_breadcrumb.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 165px;
-    width: 100%;
-
+.banner_clinic {
+  background-image: url("../img/common/bg_breadcrumb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 165px;
+  width: 100%;
 }
 
 /****************************************************
 * CART ON PC
 ****************************************************/
-.js-cart-list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: calc(100% - 285px);
+.js-cart-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: calc(100% - 285px);
 }
 
 /****************************************************
 * CUSTOMIZE LAYOUT IN MAIN
 ****************************************************/
 .service-content {
-display: flex;
-margin-top: 6rem;
+  display: flex;
+  margin-top: 6rem;
 }
-.service-content .aside{
-    width: 27rem;
-    margin-right: 1.5rem;
+.service-content .aside {
+  width: 27rem;
+  margin-right: 1.5rem;
 }
