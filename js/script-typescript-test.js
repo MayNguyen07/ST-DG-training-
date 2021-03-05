@@ -1,4 +1,4 @@
-import * as $ from "jquery";
+import $ from "jquery";
 //Show and hide sidebar
 $(".ttl-sidebar").click(function () {
     $(this).next(".category-content").stop().slideToggle(300);
@@ -17,52 +17,10 @@ function renderAllProducts(productsArray) {
 }
 var findDiv = document.querySelector(".js-cart-list");
 function renderOneProduct(product) {
-    //     const newElement = document.createElement('div')
-    //     newElement.className = 'content-cart'
-    //     newElement.innerHTML = `
-    //             <div class="cart">
-    //                 <img src="./${product.img}" class="cart-img">
-    //                 <div class="cart-body">
-    //                     <h5 class="cart-title">${product.title}</h5>
-    //                     <p class="cart-text">${product.desc}</p>
-    //                      <pclass="cart-price">${product.price}</p>
-    //                     <button data-name=${product.id} class="cart-button">Add item</button>
-    //                 </div>
-    //             </div>
-    //     `
-    //   findDiv.append(newElement)
-    // }
-    var cartListEL = document.createElement("div");
-    cartListEL.classList.add("content-cart");
-    var cartEL = document.createElement("div");
-    cartEL.classList.add("cart");
-    cartListEL.appendChild(cartEL);
-    var cartImgEL = document.createElement("img");
-    cartImgEL.classList.add("cart-img");
-    cartImgEL.src = "./" + product.img;
-    cartEL.appendChild(cartImgEL);
-    var cartBodyEL = document.createElement("div");
-    cartBodyEL.classList.add("cart-body");
-    cartEL.appendChild(cartBodyEL);
-    var cartTitleEL = document.createElement("h5");
-    cartTitleEL.classList.add("cart-title");
-    cartTitleEL.textContent = "" + product.title;
-    cartBodyEL.appendChild(cartTitleEL);
-    var cartTextEL = document.createElement("p");
-    cartTextEL.classList.add("cart-text");
-    cartTextEL.textContent = "" + product.desc;
-    cartBodyEL.appendChild(cartTextEL);
-    var cartPriceEL = document.createElement("p");
-    cartPriceEL.classList.add("cart-price");
-    cartPriceEL.textContent = "" + product.price;
-    cartBodyEL.appendChild(cartPriceEL);
-    var cartButtonEL = document.createElement("button");
-    cartButtonEL.classList.add("cart-button");
-    cartButtonEL.textContent = "Add item";
-    cartButtonEL.setAttribute("data-name", "" + product.title);
-    cartButtonEL.setAttribute("data-price", "" + product.price);
-    cartBodyEL.appendChild(cartButtonEL);
-    findDiv.append(cartListEL);
+    var newElement = document.createElement("div");
+    newElement.className = "content-cart";
+    newElement.innerHTML = "\n              <div class=\"cart\">\n                  <img src=\"./" + product.img + "\" class=\"cart-img\">\n                  <div class=\"cart-body\">\n                      <h5 class=\"cart-title\">" + product.title + "</h5>\n                      <p class=\"cart-text\">" + product.desc + "</p>\n                       <pclass=\"cart-price\">" + product.price + "</p>\n                      <button data-name=\"" + product.title + "\" data-price=" + product.price + " class=\"cart-button\">Add item</button>\n                  </div>\n              </div>\n      ";
+    findDiv === null || findDiv === void 0 ? void 0 : findDiv.append(newElement);
 }
 // ************************************************
 // Shopping Cart API
@@ -73,6 +31,13 @@ var ShoppingCartItem = /** @class */ (function () {
         this.price = price;
         this.count = count;
     }
+    Object.defineProperty(ShoppingCartItem.prototype, "total", {
+        get: function () {
+            return Number(this.price * this.count).toFixed(2);
+        },
+        enumerable: false,
+        configurable: true
+    });
     return ShoppingCartItem;
 }());
 var ShoppingCart = /** @class */ (function () {
@@ -101,7 +66,6 @@ var ShoppingCart = /** @class */ (function () {
             }
         }
     };
-    ;
     ShoppingCart.prototype.removeItemFromCart = function (name) {
         var _this = this;
         this.cart.slice().forEach(function (item) {
@@ -117,22 +81,20 @@ var ShoppingCart = /** @class */ (function () {
         });
         this.saveCart();
     };
-    ;
     ShoppingCart.prototype.removeItemFromCartAll = function (name) {
-        for (var item in this.cart) {
-            if (this.cart[item].name === name) {
-                this.cart.splice(item, 1);
-                break;
+        var _this = this;
+        this.cart.slice().forEach(function (item) {
+            var index = _this.cart.indexOf(item);
+            if (item.name === name) {
+                _this.cart.splice(index, 1);
             }
-        }
+        });
         this.saveCart();
     };
-    ;
     ShoppingCart.prototype.clearCart = function () {
         this.cart = [];
         this.saveCart();
     };
-    ;
     ShoppingCart.prototype.totalCount = function () {
         var totalCount = 0;
         for (var item in this.cart) {
@@ -140,7 +102,6 @@ var ShoppingCart = /** @class */ (function () {
         }
         return totalCount;
     };
-    ;
     ShoppingCart.prototype.totalCart = function () {
         var totalCart = 0;
         for (var item in this.cart) {
@@ -152,21 +113,19 @@ var ShoppingCart = /** @class */ (function () {
         var cartCopy = [];
         for (var i in this.cart) {
             var item = this.cart[i];
-            var itemCopy = {};
-            for (var p in item) {
-                itemCopy[p] = item[p];
-            }
-            itemCopy.total = Number(item.price * item.count).toFixed(2);
+            var itemCopy = new ShoppingCartItem(item.name, item.price, item.count);
             cartCopy.push(itemCopy);
         }
         return cartCopy;
     };
-    ;
     ShoppingCart.prototype.saveCart = function () {
         localStorage.setItem("shoppingCart", JSON.stringify(this.cart));
     };
     ShoppingCart.prototype.loadCart = function () {
-        this.cart = JSON.parse(localStorage.getItem("shoppingCart")); //shoppingCart se chuyen ve const
+        var itemJson = localStorage.getItem("shoppingCart");
+        if (itemJson) {
+            this.cart = JSON.parse(itemJson); //shoppingCart se chuyen ve const
+        }
     };
     return ShoppingCart;
 }());
@@ -322,14 +281,15 @@ function displayCart() {
                 "</tr>";
     }
     $(".show-cart").html(output);
-    $(".total-cart").html(shoppingCart.totalCart());
-    $(".total-count").html(shoppingCart.totalCount());
+    $(".total-cart").html(shoppingCart.totalCart().toString());
+    $(".total-count").html(shoppingCart.totalCount().toString());
 }
 // Delete item button
 $(".show-cart").on("click", ".delete-item", function (event) {
     var name = $(this).data("name");
     shoppingCart.removeItemFromCartAll(name);
     displayCart();
+    console.log("shopping", shoppingCart);
 });
 // -1
 $(".show-cart").on("click", ".minus-item", function (event) {
@@ -341,7 +301,8 @@ $(".show-cart").on("click", ".minus-item", function (event) {
 $(".show-cart").on("click", ".plus-item", function (event) {
     var name = $(this).data("name");
     var count = $(this).data("count");
-    shoppingCart.addItemToCart(name, count);
+    var price = $(this).data("price");
+    shoppingCart.addItemToCart(name, price, count);
     displayCart();
 });
 // Item count input
